@@ -1,38 +1,212 @@
-.App {
-  text-align: center;
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+/* custom style */
+*,
+*::before
+*::after {
+	box-sizing: border-box;
+}
+:root{
+	--primary:#ea5433;
+	--secondary:#faf1f1;
+	--text:#5a5761;
+}
+body {
+	font-family: 'Raleway', sans-serif;
+    line-height: 1.5;
+    font-size: 16px;
+	background-color: rgb(82, 55, 131);
+}
+#root {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 0 2rem;
+}
+/* 
+flex 
+*/
+.flex{
+	display: flex;
+}
+.justify-between{
+	justify-content: space-between;
+}
+.justify-start{
+	justify-content: start;
+}
+.justify-center{
+	justify-content: center;
+}
+.justify-evenly{
+	justify-content: space-evenly;
+}
+.column{
+	flex-direction: column;
+}
+.align-start{
+	align-items: flex-start;
+}
+.align-center{
+	align-items: center;
+}
+.align-content-start{
+	align-content: flex-start;
+}
+.content-center {
+	display: flex;
+	flex-direction:column;
+	justify-content:center;
+}
+.align-self-center{
+	align-self: center;
+}
+.center{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+.wrap{
+	flex-wrap: wrap;
+}
+.no-wrap{
+	flex-wrap: nowrap;
+}
+.flex-10{
+	flex: 0 1 10%;
+}
+.flex-20{
+	flex: 0 1 20%;
+}
+.flex-25{
+	flex: 0 1 25%;
+}
+.flex-28{
+	flex: 0 1 28%;
+}
+.flex-30{
+	flex: 0 1 30%;
+}
+.flex-33{
+	flex: 0 1 30%;
+}
+.flex-40{
+	flex: 0 1 40%;
+}
+.flex-48{
+	flex: 0 1 48%;
+}
+.flex-60{
+	flex: 0 1 60%;
+}
+.flex-75{
+	flex: 0 1 75%;
+}
+.flex-85{
+	flex: 0 1 85%;
+}
+.width-full{
+	flex: 0 1 100%;
+}
+.padding{
+	padding: 2rem 0;
+}
+.margin{
+	padding: 2rem 0;
+
+}
+a{
+	text-decoration: none;
+	display: inline-block;
+}
+.active-hover:hover{
+	color: var(--primary);
+}
+/* section-header */
+
+.section-header{
+	text-align: center;
+}
+.section-header h3{
+	font-weight: 700;
+	font-size: 2rem;
+}
+.section-header p{
+	padding: 1rem 0;
+}
+.scrollbar::-webkit-scrollbar {
+	display: none;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.title{
+	font-size: 3rem;
+	color: #ea5433;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.board{
+	/* border: solid 2px #1c1b1f; */
+	width: 20rem;
+	/* height: 20rem; */
+}
+.square{
+	border: solid 1px #5a5761;
+	width: 6rem;
+	height: 6rem;
+	background-color: #fff;
+}
+.winner-container{
+	margin-top: 4.5rem;
 }
 
-.App-link {
-  color: #61dafb;
+.winner{
+	margin: 2rem;
+	color: #ea5433;
+	font-size: 	1.5rem;
+	font-weight: 600;
 }
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.reset{
+	padding: 0.5rem 3rem;
+	margin: 2rem 0;
 }
