@@ -1,5 +1,6 @@
 
 import React, { useState } from 'react';
+import Confetti from 'react-confetti';
 
 import './App.css';
 import Board from './Board';
@@ -85,8 +86,11 @@ const  restart = () => {
               })
             }
             {
-                  winner && <div className='winner'>Winner is {winner}</div> 
-                  
+                  winner && 
+                  <div>
+                  <div className='winner'>Winner is {winner}</div> 
+                  <Confetti/>
+                  </div>
                 }
         </div>
                
